@@ -46,11 +46,14 @@ class APISpecExt:
         app.config.setdefault("SWAGGER_UI_URL", "/swagger-ui")
         app.config.setdefault("SWAGGER_URL_PREFIX", None)
 
+        default_security = [{"jwt": []}]
+
         self.spec = APISpec(
             title=app.config["APISPEC_TITLE"],
             version=app.config["APISPEC_VERSION"],
             openapi_version=app.config["OPENAPI_VERSION"],
             plugins=[MarshmallowPlugin(), FlaskRestfulPlugin()],
+            security=default_security,
         )
 
         blueprint = Blueprint(
