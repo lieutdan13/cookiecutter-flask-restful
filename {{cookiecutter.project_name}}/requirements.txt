@@ -5,10 +5,10 @@ flask-migrate
 flask-sqlalchemy
 flask-marshmallow
 flask-jwt-extended
-marshmallow-sqlalchemy
+marshmallow-sqlalchemy<0.19.0
 python-dotenv
 passlib
-apispec[yaml]
+apispec[yaml]<3
 apispec-webframeworks
 tox{% if cookiecutter.use_celery == "yes" %}
 celery{% endif %}
