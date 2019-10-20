@@ -8,6 +8,9 @@ matrix:
       python: 3.6
       env: TOXENV=py36
     - name: "python 3.7"
+    - name: "python 3.8"
+      python: 3.8
+      env: TOXENV=py38
 
 before_install:
   - "pip3 install --upgrade pip cookiecutter"
